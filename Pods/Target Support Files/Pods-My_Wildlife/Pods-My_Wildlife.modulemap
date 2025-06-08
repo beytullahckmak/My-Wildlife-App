@@ -1,0 +1,6 @@
+framework module Pods_My_Wildlife {
+  umbrella header "Pods-My_Wildlife-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C905352F1902375BA56BAEDC /* Pods_My_Wildlife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34BB6AE555B93270A2F4D80 /* Pods_My_Wildlife.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		579529F4A2B8161EF98D2AD0 /* Pods-My_Wildlife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My_Wildlife.release.xcconfig"; path = "Target Support Files/Pods-My_Wildlife/Pods-My_Wildlife.release.xcconfig"; sourceTree = "<group>"; };
+		CDD94D605A61A601EC51EF14 /* Pods-My_Wildlife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My_Wildlife.debug.xcconfig"; path = "Target Support Files/Pods-My_Wildlife/Pods-My_Wildlife.debug.xcconfig"; sourceTree = "<group>"; };
+		D34BB6AE555B93270A2F4D80 /* Pods_My_Wildlife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Wildlife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE8DB1B2DEF20C7000FD764 /* My_Wildlife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = My_Wildlife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C905352F1902375BA56BAEDC /* Pods_My_Wildlife.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05CF4C38D2DE182A699EA0FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D34BB6AE555B93270A2F4D80 /* Pods_My_Wildlife.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FF38599887D599615CE3765 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDD94D605A61A601EC51EF14 /* Pods-My_Wildlife.debug.xcconfig */,
+				579529F4A2B8161EF98D2AD0 /* Pods-My_Wildlife.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FDE8DB122DEF20C7000FD764 = {
 			isa = PBXGroup;
 			children = (
 				FDE8DB1D2DEF20C7000FD764 /* My_Wildlife */,
 				FDE8DB1C2DEF20C7000FD764 /* Products */,
+				6FF38599887D599615CE3765 /* Pods */,
+				05CF4C38D2DE182A699EA0FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDE8DB2E2DEF20C8000FD764 /* Build configuration list for PBXNativeTarget "My_Wildlife" */;
 			buildPhases = (
+				F185A61DDCD3CF75A53B2E07 /* [CP] Check Pods Manifest.lock */,
 				FDE8DB172DEF20C7000FD764 /* Sources */,
 				FDE8DB182DEF20C7000FD764 /* Frameworks */,
 				FDE8DB192DEF20C7000FD764 /* Resources */,
+				E6A9A85A446101CA80E2D08D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				FDE8DB1D2DEF20C7000FD764 /* My_Wildlife */,
 			);
 			name = My_Wildlife;
-			packageProductDependencies = (
-			);
 			productName = My_Wildlife;
 			productReference = FDE8DB1B2DEF20C7000FD764 /* My_Wildlife.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +155,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E6A9A85A446101CA80E2D08D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My_Wildlife/Pods-My_Wildlife-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My_Wildlife/Pods-My_Wildlife-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-My_Wildlife/Pods-My_Wildlife-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F185A61DDCD3CF75A53B2E07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My_Wildlife-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDE8DB172DEF20C7000FD764 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +210,7 @@
 /* Begin XCBuildConfiguration section */
 		FDE8DB2F2DEF20C8000FD764 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD94D605A61A601EC51EF14 /* Pods-My_Wildlife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -168,6 +239,7 @@
 		};
 		FDE8DB302DEF20C8000FD764 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 579529F4A2B8161EF98D2AD0 /* Pods-My_Wildlife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
