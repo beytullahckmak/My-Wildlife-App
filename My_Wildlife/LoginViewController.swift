@@ -9,21 +9,29 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var textEmail: UITextField!
+    @IBOutlet weak var textPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func showAlert(title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
-    */
+    
+    
+    @IBAction func signinButtonClick(_ sender: Any) {
+        if (textEmail.text?.isEmpty)! || (textPassword.text?.isEmpty)! {
+               
+                    showAlert(title: "HATA!!!", message: "Lütfen boş alanları doldurunuz.")
+            } else {
+                performSegue(withIdentifier:"toHomePage", sender: nil)
+            }
+        
+    }
+    
 
 }
