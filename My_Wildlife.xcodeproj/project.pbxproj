@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C905352F1902375BA56BAEDC /* Pods_My_Wildlife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34BB6AE555B93270A2F4D80 /* Pods_My_Wildlife.framework */; };
+		FD5F9C4F2DF5B7F1005136B8 /* Pods_My_Wildlife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34BB6AE555B93270A2F4D80 /* Pods_My_Wildlife.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C905352F1902375BA56BAEDC /* Pods_My_Wildlife.framework in Frameworks */,
+				FD5F9C4F2DF5B7F1005136B8 /* Pods_My_Wildlife.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +64,6 @@
 				CDD94D605A61A601EC51EF14 /* Pods-My_Wildlife.debug.xcconfig */,
 				579529F4A2B8161EF98D2AD0 /* Pods-My_Wildlife.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -164,9 +163,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-My_Wildlife/Pods-My_Wildlife-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-My_Wildlife/Pods-My_Wildlife-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -304,7 +307,7 @@
 				DEVELOPMENT_TEAM = RJ5QU65T4B;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -368,7 +371,7 @@
 				DEVELOPMENT_TEAM = RJ5QU65T4B;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

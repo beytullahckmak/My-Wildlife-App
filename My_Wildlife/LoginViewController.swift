@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -28,7 +30,14 @@ class LoginViewController: UIViewController {
                
                     showAlert(title: "HATA!!!", message: "Lütfen boş alanları doldurunuz.")
             } else {
-                performSegue(withIdentifier:"toHomePage", sender: nil)
+                Auth.auth().signIn(withEmail: textEmail.text!, password: textPassword.text!){(result, error) in
+                    if error != nil {
+                        self.showAlert(title: "HATA!!!", message: error!.localizedDescription)
+                    }
+                    else{
+                        self.performSegue(withIdentifier:"toHomePage", sender: nil)
+                    }
+                }
             }
         
     }

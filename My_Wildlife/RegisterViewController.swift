@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
@@ -34,7 +36,16 @@ class RegisterViewController: UIViewController {
             showAlert(title: "HATA!", message: "Lütfen tüm alanları doldurunuz.")
         }
         else{
-            performSegue(withIdentifier: "toLoginPagefromRegister", sender: nil)
+            Auth.auth().createUser(withEmail: textEmail.text!, password: textPassword.text!) { authResult, error in
+                
+                if error != nil {
+                    self.showAlert(title: "HATA!", message: error!.localizedDescription)
+                }
+                else{
+                    self.performSegue(withIdentifier: "toLoginPagefromRegister", sender: nil)
+                }
+            }
+            
         }
     }
     
