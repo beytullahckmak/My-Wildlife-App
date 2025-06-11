@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseCore
 import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterViewController: UIViewController {
 
@@ -42,7 +43,26 @@ class RegisterViewController: UIViewController {
                     self.showAlert(title: "HATA!", message: error!.localizedDescription)
                 }
                 else{
-                    self.performSegue(withIdentifier: "toLoginPagefromRegister", sender: nil)
+                    if let user = authResult?.user {
+                        let db = Firestore.firestore()
+                        let userRef = db.collection("users").document(user.uid)
+                                
+                        let userData: [String: Any] = [
+                            "uid": user.uid,
+                            "name": self.textName.text!,
+                            "surname": self.textSurname.text!,
+                            "email": self.textEmail.text!,
+                            "createdAt": Timestamp()
+                                ]
+                                
+                    userRef.setData(userData) { error in
+                        if let error = error {
+                        self.showAlert(title: "HATA!", message: "Firestore'a kayıt eklenemedi: \(error.localizedDescription)")
+                                    } else {
+                                    self.performSegue(withIdentifier: "toLoginPagefromRegister", sender: nil)
+                                    }
+                            }
+                    }
                 }
             }
             
