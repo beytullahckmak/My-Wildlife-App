@@ -60,33 +60,33 @@
                     <connections>
                         <outlet property="messageText" destination="znj-MB-are" id="AhX-Yd-Pdl"/>
                         <segue destination="sWW-K5-OVn" kind="show" identifier="toLoginPage" id="Bpp-f7-le7"/>
-                        <segue destination="OIW-04-Sll" kind="show" identifier="toRegisterPage" id="gnt-CR-oxE"/>
+                        <segue destination="OIW-04-Sll" kind="show" identifier="toRegisterPage" id="wVt-Dr-CW7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015.9420289855074" y="2.6785714285714284"/>
+            <point key="canvasLocation" x="1209" y="3"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Keu-Ys-IXP">
             <objects>
                 <viewController id="sWW-K5-OVn" customClass="LoginViewController" customModule="My_Wildlife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p9q-FQ-XmE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EId-We-p5e">
-                                <rect key="frame" x="20" y="156" width="374" height="34"/>
+                                <rect key="frame" x="20" y="248" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zF4-uN-2ln">
-                                <rect key="frame" x="20" y="225" width="374" height="34"/>
+                                <rect key="frame" x="20" y="317" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qah-Mo-f29">
-                                <rect key="frame" x="20" y="-34" width="374" height="61"/>
+                                <rect key="frame" x="20" y="58" width="374" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="aGx-Mx-kZP"/>
                                 </constraints>
@@ -95,7 +95,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjb-23-J9G">
-                                <rect key="frame" x="78" y="319" width="258" height="35"/>
+                                <rect key="frame" x="78" y="411" width="258" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SIGN IN"/>
                                 <connections>
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1x-5D-UcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="-477"/>
+            <point key="canvasLocation" x="2401" y="-707"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4FB-QX-OFj">
@@ -154,21 +154,21 @@
             <objects>
                 <viewController id="OIW-04-Sll" customClass="RegisterViewController" customModule="My_Wildlife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8aD-tF-TMQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XF0-i5-zUp">
-                                <rect key="frame" x="20" y="178" width="374" height="34"/>
+                                <rect key="frame" x="20" y="270" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jhD-sF-L53">
-                                <rect key="frame" x="20" y="247" width="374" height="34"/>
+                                <rect key="frame" x="20" y="339" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SJi-xO-27s">
-                                <rect key="frame" x="20" y="109" width="154" height="34"/>
+                                <rect key="frame" x="20" y="201" width="154" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="154" id="4kM-Ha-hWT"/>
                                 </constraints>
@@ -176,12 +176,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rWA-br-9kl">
-                                <rect key="frame" x="227" y="109" width="167" height="34"/>
+                                <rect key="frame" x="227" y="201" width="167" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mp-Ob-uDY">
-                                <rect key="frame" x="78" y="341" width="258" height="35"/>
+                                <rect key="frame" x="78" y="433" width="258" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="REGISTER"/>
                                 <connections>
@@ -189,7 +189,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="REGISTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ka-w4-7gC">
-                                <rect key="frame" x="12" y="0.0" width="374" height="61"/>
+                                <rect key="frame" x="20" y="60" width="374" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rzw-22-DMP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2036" y="249"/>
+            <point key="canvasLocation" x="2716" y="327"/>
         </scene>
         <!--Item Ekle-->
         <scene sceneID="Ce4-Xf-fAe">
@@ -240,33 +240,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ucp-BC-yFR">
-                                <rect key="frame" x="49" y="162" width="317" height="247"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kategori" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9kO-wg-QPm">
-                                <rect key="frame" x="75" y="443" width="263" height="34"/>
+                                <rect key="frame" x="44" y="335" width="274" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tür" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OAG-jI-Jh4">
-                                <rect key="frame" x="76" y="503" width="263" height="34"/>
+                                <rect key="frame" x="44" y="431" width="274" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="410-GX-qdK">
-                                <rect key="frame" x="76" y="564" width="263" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Anı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="410-GX-qdK">
+                                <rect key="frame" x="44" y="485" width="274" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d55-ct-a0M">
-                                <rect key="frame" x="133" y="676" width="149" height="35"/>
+                                <rect key="frame" x="131" y="725" width="149" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Ekle"/>
+                                <connections>
+                                    <action selector="addButtonOnClick:" destination="dpD-V0-TAp" eventType="touchUpInside" id="Gj8-zw-tNy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hayvan Ekle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvI-F4-DmF">
                                 <rect key="frame" x="140" y="71" width="132" height="30"/>
@@ -275,15 +274,67 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alt Kategori" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9T0-hC-azp">
+                                <rect key="frame" x="44" y="385" width="274" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Camera Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwU-wX-gcD">
+                                <rect key="frame" x="44" y="535" width="114" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9k-9S-fCE">
+                                <rect key="frame" x="44" y="561" width="77" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Diyafram" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FsZ-F4-lTw">
+                                <rect key="frame" x="140" y="561" width="77" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enstantane" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Lh-Il-di6">
+                                <rect key="frame" x="239" y="561" width="79" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ucp-BC-yFR">
+                                <rect key="frame" x="44" y="129" width="322" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hayvan Hakkında" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wda-Kz-NP6">
+                                <rect key="frame" x="44" y="627" width="274" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eKT-FR-TwW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item Ekle" id="MD4-ay-VNp"/>
+                    <connections>
+                        <outlet property="altKategoriText" destination="9T0-hC-azp" id="Fx8-AL-EDb"/>
+                        <outlet property="aniText" destination="410-GX-qdK" id="BAN-aq-5XR"/>
+                        <outlet property="animalInfoText" destination="Wda-Kz-NP6" id="ECe-H6-QBl"/>
+                        <outlet property="diyaframText" destination="FsZ-F4-lTw" id="IS3-D0-zLj"/>
+                        <outlet property="enstantaneText" destination="8Lh-Il-di6" id="Pvn-aQ-q96"/>
+                        <outlet property="imageAnimal" destination="ucp-BC-yFR" id="arL-n3-mN1"/>
+                        <outlet property="isoText" destination="b9k-9S-fCE" id="3cJ-K0-tBG"/>
+                        <outlet property="kategoriText" destination="9kO-wg-QPm" id="dR3-SR-Oyz"/>
+                        <outlet property="turText" destination="OAG-jI-Jh4" id="iJm-Cw-HI3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kx9-bH-Fou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4004.347826086957" y="364.95535714285711"/>
+            <point key="canvasLocation" x="5038" y="327"/>
         </scene>
         <!--Anasayfa-->
         <scene sceneID="1Jt-1j-1oY">
@@ -299,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joc-me-s4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3958" y="-300"/>
+            <point key="canvasLocation" x="5038" y="-501"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RnM-y5-rfE">
@@ -319,7 +370,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Exw-vk-BOy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2969" y="109"/>
+            <point key="canvasLocation" x="3765" y="-104"/>
         </scene>
         <!--Profil-->
         <scene sceneID="D13-tx-G8H">
@@ -392,12 +443,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcj-hy-zvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3144.9275362318845" y="1011.8303571428571"/>
+            <point key="canvasLocation" x="3580" y="1378"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Bpp-f7-le7"/>
-        <segue reference="m0x-JN-eSX"/>
+        <segue reference="XOu-7h-VAe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="pawprint.fill" catalog="system" width="128" height="112"/>

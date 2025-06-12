@@ -60,16 +60,12 @@ class RegisterViewController: UIViewController {
                         self.showAlert(title: "HATA!", message: "Firestore'a kayıt eklenemedi: \(error.localizedDescription)")
                                     }
                         else {
-                                    self.performSegue(withIdentifier: "toLoginPagefromRegister", sender: nil)
+                            self.performSegue(withIdentifier: "toLoginPagefromRegister", sender: nil)
                                     }
-                            }
+                        }
                     }
                 }
             }
-            
         }
     }
-    
-    
-
 }
