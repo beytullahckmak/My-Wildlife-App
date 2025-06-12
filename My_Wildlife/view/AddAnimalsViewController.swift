@@ -181,6 +181,17 @@ class AddAnimalsViewController: UIViewController, UIImagePickerControllerDelegat
         imageAnimal.image = info[.originalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
     }
+    func clearForm() {
+        self.imageAnimal.image = UIImage(systemName: "photo")
+        self.kategoriText.text = ""
+        self.altKategoriText.text = ""
+        self.turText.text = ""
+        self.aniText.text = ""
+        self.isoText.text = ""
+        self.diyaframText.text = ""
+        self.enstantaneText.text = ""
+        self.animalInfoText.text = ""
+    }
 
     @IBAction func addButtonOnClick(_ sender: Any) {
         let Storage = Storage.storage()
@@ -240,6 +251,7 @@ class AddAnimalsViewController: UIViewController, UIImagePickerControllerDelegat
                             print("Firestore ekleme hatası: \(error.localizedDescription)")
                         } else {
                             print("Fotoğraf başarıyla Firestore'a eklendi.")
+                            self.clearForm()
                         }
                     }
                 }
