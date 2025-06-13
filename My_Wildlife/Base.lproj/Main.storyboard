@@ -3,8 +3,10 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -261,8 +263,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d55-ct-a0M">
                                 <rect key="frame" x="131" y="725" width="149" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.7562105251206146" green="1" blue="0.16593466835753534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Ekle"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Ekle">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="addButtonOnClick:" destination="dpD-V0-TAp" eventType="touchUpInside" id="Gj8-zw-tNy"/>
                                 </connections>
@@ -319,7 +326,16 @@
                         <viewLayoutGuide key="safeArea" id="eKT-FR-TwW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item Ekle" id="MD4-ay-VNp"/>
+                    <tabBarItem key="tabBarItem" title="Item Ekle" id="MD4-ay-VNp">
+                        <imageReference key="image" image="bird.circle.fill" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color red="0.67649220656937981" green="1" blue="0.53357913496153042" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="altKategoriText" destination="9T0-hC-azp" id="Fx8-AL-EDb"/>
                         <outlet property="aniText" destination="410-GX-qdK" id="BAN-aq-5XR"/>
@@ -343,14 +359,96 @@
                     <view key="view" contentMode="scaleToFill" id="JC5-U6-WiC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YYw-Fz-Jb4">
+                                <rect key="frame" x="0.0" y="141" width="414" height="672"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="65z-Pf-Zse">
+                                    <size key="itemSize" width="165" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="categoryCell" id="yul-hl-FTR" customClass="CategoryCellCollectionViewCell" customModule="My_Wildlife" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PJx-gC-IcZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G85-mh-oD8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGr-AG-bv9">
+                                                    <rect key="frame" x="15" y="158" width="120" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="JB4-53-ijk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="AGr-AG-bv9" secondAttribute="trailing" constant="15" id="01V-wi-jh7"/>
+                                                <constraint firstItem="AGr-AG-bv9" firstAttribute="top" secondItem="G85-mh-oD8" secondAttribute="bottom" constant="8" id="JpC-By-cOh"/>
+                                                <constraint firstItem="AGr-AG-bv9" firstAttribute="leading" secondItem="PJx-gC-IcZ" secondAttribute="leading" constant="15" id="MwC-0I-Kcu"/>
+                                                <constraint firstItem="AGr-AG-bv9" firstAttribute="bottom" secondItem="PJx-gC-IcZ" secondAttribute="bottomMargin" id="Xvd-Pz-eae"/>
+                                                <constraint firstItem="G85-mh-oD8" firstAttribute="centerX" secondItem="AGr-AG-bv9" secondAttribute="centerX" id="ffz-OT-y78"/>
+                                                <constraint firstItem="G85-mh-oD8" firstAttribute="leading" secondItem="PJx-gC-IcZ" secondAttribute="leading" id="kdd-W4-JbH"/>
+                                                <constraint firstItem="G85-mh-oD8" firstAttribute="top" secondItem="PJx-gC-IcZ" secondAttribute="top" id="uhn-88-Ev4"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="150" height="200"/>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="G85-mh-oD8" id="f9u-Y9-bcW"/>
+                                            <outlet property="categoryName" destination="AGr-AG-bv9" id="mHP-lM-A6j"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY WILDLIFE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOO-mQ-aS7">
+                                <rect key="frame" x="117" y="70" width="180" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fUh-70-bFs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YYw-Fz-Jb4" firstAttribute="bottom" secondItem="fUh-70-bFs" secondAttribute="bottom" id="QTA-fN-ADM"/>
+                            <constraint firstItem="HOO-mQ-aS7" firstAttribute="top" secondItem="fUh-70-bFs" secondAttribute="top" constant="22" id="aox-nA-uIK"/>
+                            <constraint firstItem="YYw-Fz-Jb4" firstAttribute="top" secondItem="HOO-mQ-aS7" secondAttribute="bottom" constant="35" id="gDl-2d-FkU"/>
+                            <constraint firstItem="YYw-Fz-Jb4" firstAttribute="leading" secondItem="fUh-70-bFs" secondAttribute="leading" id="gfl-Pi-vm1"/>
+                            <constraint firstItem="YYw-Fz-Jb4" firstAttribute="trailing" secondItem="fUh-70-bFs" secondAttribute="trailing" id="sPc-cq-ytn"/>
+                            <constraint firstItem="HOO-mQ-aS7" firstAttribute="centerX" secondItem="YYw-Fz-Jb4" secondAttribute="centerX" id="yza-Ca-wLI"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Anasayfa" selectedImage="pawprint.fill" catalog="system" id="ZdY-fJ-23A"/>
+                    <connections>
+                        <outlet property="collectionView" destination="YYw-Fz-Jb4" id="1t7-py-zJK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joc-me-s4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5038" y="-501"/>
+            <point key="canvasLocation" x="5066.666666666667" y="-467.41071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hvm-4U-WcZ">
+            <objects>
+                <viewController id="avr-qS-LZm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sIp-qX-ETl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SQ4-mE-6xc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ij3-9j-Glk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6057.971014492754" y="-467.41071428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RnM-y5-rfE">
@@ -452,9 +550,16 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add" width="1024" height="1024"/>
+        <image name="bird.circle.fill" catalog="system" width="128" height="123"/>
         <image name="pawprint.fill" catalog="system" width="128" height="112"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
