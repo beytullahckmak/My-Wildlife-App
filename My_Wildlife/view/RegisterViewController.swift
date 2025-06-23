@@ -1,10 +1,3 @@
-//
-//  RegisterViewController.swift
-//  My_Wildlife
-//
-//  Created by Beytullah Cakmak on 3.06.2025.
-//
-
 import UIKit
 import FirebaseCore
 import FirebaseAuth

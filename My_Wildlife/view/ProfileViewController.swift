@@ -1,10 +1,3 @@
-//
-//  ProfileViewController.swift
-//  My_Wildlife
-//
-//  Created by Beytullah Cakmak on 3.06.2025.
-//
-
 import UIKit
 import FirebaseAuth
 import FirebaseCore
@@ -20,13 +13,19 @@ class ProfileViewController: UIViewController {
 
     }
     
+    func showAlert (title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func onClickLogout(_ sender: Any) {
         do{
             try Auth.auth().signOut()
             performSegue(withIdentifier: "toBackApp", sender: nil)
             
         }catch{
-            print("Hata!!!")
+            showAlert(title: "HATA!!!", message: "Çıkış Işlemi Başarısız!")
         }
     }
     

@@ -1,10 +1,3 @@
-//
-//  LoginViewController.swift
-//  My_Wildlife
-//
-//  Created by Beytullah Cakmak on 3.06.2025.
-//
-
 import UIKit
 import FirebaseCore
 import FirebaseAuth
@@ -16,7 +9,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     func showAlert(title:String, message:String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
