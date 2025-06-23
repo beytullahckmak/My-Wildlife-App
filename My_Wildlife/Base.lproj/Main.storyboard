@@ -429,22 +429,27 @@
                     <tabBarItem key="tabBarItem" title="Anasayfa" selectedImage="pawprint.fill" catalog="system" id="ZdY-fJ-23A"/>
                     <connections>
                         <outlet property="collectionView" destination="YYw-Fz-Jb4" id="1t7-py-zJK"/>
+                        <segue destination="avr-qS-LZm" kind="presentation" identifier="toAltKategori" modalPresentationStyle="fullScreen" id="uUN-4A-Ecw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joc-me-s4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5066.666666666667" y="-467.41071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Sub Category-->
         <scene sceneID="hvm-4U-WcZ">
             <objects>
-                <viewController id="avr-qS-LZm" sceneMemberID="viewController">
+                <viewController id="avr-qS-LZm" customClass="SubCategory" customModule="My_Wildlife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIp-qX-ETl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="SQ4-mE-6xc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Tbs-Is-ZDX"/>
+                    <connections>
+                        <segue destination="7y3-Xq-R3k" kind="presentation" identifier="toSpecies" modalPresentationStyle="fullScreen" id="Svy-ZL-65N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ij3-9j-Glk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -542,6 +547,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcj-hy-zvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3580" y="1378"/>
+        </scene>
+        <!--Species-->
+        <scene sceneID="1vt-l6-RLP">
+            <objects>
+                <viewController id="7y3-Xq-R3k" customClass="Species" customModule="My_Wildlife" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v5w-tO-7wA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tws-dQ-X0M">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N6C-ho-aAG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tws-dQ-X0M" firstAttribute="leading" secondItem="N6C-ho-aAG" secondAttribute="leading" id="6y9-qC-D7t"/>
+                            <constraint firstItem="N6C-ho-aAG" firstAttribute="trailing" secondItem="Tws-dQ-X0M" secondAttribute="trailing" id="e2Y-5h-ggy"/>
+                            <constraint firstItem="Tws-dQ-X0M" firstAttribute="top" secondItem="N6C-ho-aAG" secondAttribute="top" id="fY5-ZV-lp2"/>
+                            <constraint firstItem="Tws-dQ-X0M" firstAttribute="bottom" secondItem="N6C-ho-aAG" secondAttribute="bottom" id="xEk-ey-pe9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mgx-Sd-0rp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l4L-G3-xVE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7088" y="-467"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

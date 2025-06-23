@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
         collectionView.delegate = self
         collectionView.dataSource = self
-        // Do any additional setup after loading the view.
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
